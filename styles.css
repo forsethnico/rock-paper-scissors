@@ -1,0 +1,87 @@
+body {
+  background-color: #623B5A;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.human-side, .computer-side {
+  background-color: #89608E;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-play-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.rules-box {
+  color: #white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6A4A6D;
+  padding: 16px;
+  margin: 10px;
+  width: 300px;
+  height: auto;
+}
+
+p {
+  color: white;
+  display: block;
+  white-space: pre-line;
+  width: auto;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 66px;
+  margin-bottom: 4px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+  color: white;
+  font-size: 24px;
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+img {
+  height: 130px;
+  width: 130px;
+}
+
+button {
+  color: white;
+  background-color: #623B5A;
+  border: none;
+  font-family: monospace;
+  margin-top: 36px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none!important
+}
