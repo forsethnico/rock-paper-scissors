@@ -10,7 +10,7 @@
 
 <body>
   <section class="human-side">
-    <div class="token"></div>
+    <p class="token">👩</p>
     <h2>Human</h2>
     <section class="human-wins">
       <h2>Wins: 0</h2>
@@ -21,23 +21,25 @@
     <h1>Rock, Paper, Scissors!</h1>
     <h2 class="choice">Choose your game!</h2>
     <div class="result"></div>
-    <section class="rules-box" data-game-type="classic">
-      <h3>🪨CLASSIC✂️</h3>
-      <p>
-        scissors > paper
-        paper > rock
-        rock > scissors
-      </p>
-    </section>
-    <section class="rules-box" data-game-type= "difficult">
-      <h3>🦎DIFFICULT🖖</h3>
-      <p>
-        scissors > paper & lizard
-        paper > rock & spock
-        rock > scissors & lizard
-        spock > scissors & rock
-        lizard > paper & spock
-      </p>
+    <section class="rules-wrapper">
+      <section class="rules-box" data-game-type="classic">
+        <h3>🪨CLASSIC✂️</h3>
+        <p>
+          scissors > paper
+          paper > rock
+          rock > scissors
+        </p>
+      </section>
+      <section class="rules-box" data-game-type= "difficult">
+        <h3>🦎DIFFICULT🖖</h3>
+        <p>
+          scissors > paper & lizard
+          paper > rock & spock
+          rock > scissors & lizard
+          spock > scissors & rock
+          lizard > paper & spock
+        </p>
+      </section>
     </section>
     <section class="classic-choice hidden">
       <img class= "fighter-choices" data-fighter-type="rock" src="assets/happy-rocks.png" alt="happy rock"/>
@@ -52,12 +54,14 @@
     </section>
   </section>
   <aside class="computer-side">
-    <div class="token"></div>
+    <p class="token">💻</p>
     <h2>Computer</h2>
     <section class="computer-wins">
       <h2>Wins: 0</h2>
     </section>
   </aside>
+  <script type="text/javascript" src="player.js"></script>
+  <script type="text/javascript" src="game.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </body>
 

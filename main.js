@@ -1,27 +1,30 @@
-var Game = require('./game');
+//const Game = require('/game');
 
 var rulesBtn = document.querySelectorAll(".rules-box")
 var fighterChoices = document.querySelectorAll(".fighter-choices")
 var humanScore = document.querySelector(".human-wins")
 var computerScore = document.querySelector(".computer-wins");
 var result = document.querySelector(".result")
+var classicFighters = document.querySelector(".classic-choice")
+var difficultFighters = document.querySelector(".difficult-choice")
+var rulesWrapper = document.querySelector(".rules-wrapper")
 
-
-
-window.addEventListener("load", chooseGame)
+// window.addEventListener("load", chooseGame)
 fighterChoices.forEach((choice) => {
   choice.addEventListener("click", getUserChoice)
 })
-rulesBtn.addEventListener("click", chooseGame)
+rulesBtn.forEach((choice) => {
+  choice.addEventListener("click", chooseGame)
+})
 
 var gameBoard = new Game()
 
 function chooseGame(event) {
   gameBoard.setGameType(event.target.getAttribute("data-game-type"))
-  rulesBtn.classList.add('hidden')
-  //show classic fighter images
+  rulesWrapper.classList.add('hidden')
+  classicFighters.classList.remove('hidden')
   if (gameBoard.gameType === "difficult") {
-    //show diffcult fighter images
+    difficultFighters.classList.remove('hidden')
   }
 }
 

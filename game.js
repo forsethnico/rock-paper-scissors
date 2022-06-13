@@ -1,9 +1,9 @@
-var Player = require('./player');
+// var Player = require('./player');
 
 class Game {
   constructor() {
-    this.humanPlayer = new Player("human")
-    this.computerPlayer = new Player("computer")
+    this.humanPlayer = new Player("human", '👩')
+    this.computerPlayer = new Player("computer", "💻")
     this.gameType = "classic"
     this.fighters = [];
   }
@@ -33,12 +33,8 @@ class Game {
       }
       return winner
     }
-
-
-  restartGame() {
-    this.score = 0
 }
 
 
 
-module.exports = Game;
+// module.exports = Game;

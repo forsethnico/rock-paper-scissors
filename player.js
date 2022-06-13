@@ -1,9 +1,7 @@
-
-
 class Player {
-  constructor(name) {
+  constructor(name, token) {
     this.name = name
-    this.token = '👩' || '💻'
+    this.token = token
     this.fighter = ""
     this.wins = 0
   }
@@ -12,5 +10,3 @@ class Player {
     return fighters[randomNumber]
   }
 }
-
-module.exports = Player;
