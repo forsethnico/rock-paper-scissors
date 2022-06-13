@@ -10,18 +10,18 @@
 
 <body>
   <section class="human-side">
-    <p>👩</p>
+    <div class="token"></div>
     <h2>Human</h2>
-    <section class="score-count">
+    <section class="human-wins">
       <h2>Wins: 0</h2>
     </section>
-    <button class="game-button" id="changeGameBtn">CHANGE GAME?</button>
+    <button class="game-button hidden" id="changeGameBtn">CHANGE GAME?</button>
   </section>
   <section class="game-play-area">
     <h1>Rock, Paper, Scissors!</h1>
     <h2 class="choice">Choose your game!</h2>
     <div class="result"></div>
-    <section class="rules-box" id="classicRules">
+    <section class="rules-box" data-game-type="classic">
       <h3>🪨CLASSIC✂️</h3>
       <p>
         scissors > paper
@@ -29,32 +29,32 @@
         rock > scissors
       </p>
     </section>
-    <section class="rules-box" id="difficultRules">
-      <h3>🦎<span>DIFFICULT🖖</h3>
+    <section class="rules-box" data-game-type= "difficult">
+      <h3>🦎DIFFICULT🖖</h3>
       <p>
         scissors > paper & lizard
-        paper > rock & alien
+        paper > rock & spock
         rock > scissors & lizard
         spock > scissors & rock
         lizard > paper & spock
       </p>
     </section>
-    <section class="easy-fighter-choice">
-      <img id="rock" src="assets/happy-rocks.png" alt="happy rock">
-      <img id="scissors" src="assets/happy-scissors.png" alt="happy scissors">
-      <img id="paper" src="assets/happy-paper.png" alt="happy paper">
+    <section class="classic-choice hidden">
+      <img class= "fighter-choices" data-fighter-type="rock" src="assets/happy-rocks.png" alt="happy rock"/>
+      <img class= "fighter-choices" data-fighter-type="scissors" src="assets/happy-scissors.png" alt="happy scissors"/>
+      <img class= "fighter-choices" data-fighter-type="paper" src="assets/happy-paper.png" alt="happy paper"/>
     </section>
-    <section class="hard-fighter-choice">
-      <img id="lizard" src="assets/flat-lizard.png" alt="lizard">
-      <img id="spock" src="assets/spock.png" alt="spock">
+    <section class= "difficult-choice hidden">
+      <img class= "fighter-choices" data-fighter-type="lizard" src="assets/flat-lizard.png" alt="lizard"/>
+      <img class= "fighter-choices" data-fighter-type="spock" src="assets/spock.png" alt="spock"/>
     </section>
-    <section class="winner-podium">
+    <section class="result-podium hidden">
     </section>
   </section>
   <aside class="computer-side">
-    <p>💻</p>
+    <div class="token"></div>
     <h2>Computer</h2>
-    <section class="score">
+    <section class="computer-wins">
       <h2>Wins: 0</h2>
     </section>
   </aside>
