@@ -15,7 +15,7 @@ This application will be deployed to GitHub pages, and can be accessed soon once
   - Understand the difference between the data model and how the data is displayed on the DOM
   - Use our problem solving process to break down large problems and solve things step by step
 ## Illustrations
-https://user-images.githubusercontent.com/18154724/173670156-b8db6d1a-2a46-4eb8-9f3b-5b111d7ddeda.mp4
+https://user-images.githubusercontent.com/18154724/173674889-f325fc5f-e5a6-461f-a4cd-5e5e9ccf6c16.mov
 ## Application Features
 - On page load, there are two game play options: one with the classic "rock, paper, scissors" choices, and the other is more difficult with five options "rock, paper, scissors, lizard, spock." The user chooses a game play option which chooses which selection of fighters are available. 
 - The game is played by one user against a computer which generates a randomly selected fighter choice from the available options. The user is directed to "Choose a Fighter!" and they must select their choice.
