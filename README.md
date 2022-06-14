@@ -15,7 +15,7 @@ This application will be deployed to GitHub pages, and can be accessed soon once
   - Understand the difference between the data model and how the data is displayed on the DOM
   - Use our problem solving process to break down large problems and solve things step by step
 ## Illustrations
-  ![Rock-Paper-Scissors](link)
+  ![Rock-Paper-Scissors](https://user-images.githubusercontent.com/18154724/173669689-d65f9553-5c7a-459e-b452-832807858fac.mp4)
 ## Application Features
 - On page load, there are two game play options: one with the classic "rock, paper, scissors" choices, and the other is more difficult with five options "rock, paper, scissors, lizard, spock." The user chooses a game play option which chooses which selection of fighters are available. 
 - The game is played by one user against a computer which generates a randomly selected fighter choice from the available options. The user is directed to "Choose a Fighter!" and they must select their choice.
@@ -41,4 +41,3 @@ This application will be deployed to GitHub pages, and can be accessed soon once
   -[YouTube](https://www.youtube.com/)
   - [W3Schools](https://www.w3schools.com/)
   - [Trello Board](https://trello.com/b/7v4C9C0L/final-solo-project) for organization
-
