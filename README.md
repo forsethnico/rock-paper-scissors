@@ -22,9 +22,15 @@ https://user-images.githubusercontent.com/18154724/173674889-f325fc5f-e5a6-461f-
 - The winner is determined, the user choice and the computer choice fighter images are then displayed, along with a message about who won that round. The win count for the respective player is incremented and no scores are changed if the result is a draw. The win count is reset on page refresh.  
 - After one round of battle is played, the user has the ability to "Change Game" from classic to more difficult to continue playing (win count doesn't reset). You can move back and forth between game types as many times as you would like. 
 - A timeout is used after a completed game to reset the board to show the fighter choices to play again. 
+-Architecture:
+  * Two Javascript files (player.js and game. js) contain classes where the game logic exists
+  * There is one instance of the Game class created and two Player instances that are interacting with each other. I struggled with how to implement the appropriate methods between the two. 
+  * One javascript file (main.js) displays the data to the DOM
+  * Separate CSS and HTML files contain the skeleton and styling elements
 ## Possible Future Extensions
-  - Set a specific number of wins for a player to reach and then restart the game score to zero wins. 
-  - Implement a local storage extension where the number of wins would persist across page refreshes. 
+  - Set a specific number of wins for a player to reach and then restart the game score to zero wins. If I had additional time, I wanted to implement this  feature first. 
+  - Implement a local storage extension where the number of wins would persist across page refreshes. This is something I would like to learn more about, but have not researched at this time. 
+  - I would also like to update the CSS with more microinteractions and perhaps making the fighters more animated. 
 ## Set Up
 1. Create a private repository on GitHub. 
 2. Clone the repo to your local machine.
@@ -37,7 +43,7 @@ https://user-images.githubusercontent.com/18154724/173674889-f325fc5f-e5a6-461f-
   - Atom
 ## Resources
   - [MDN](http://developer.mozilla.org/en-US/)
-  -[JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
-  -[YouTube](https://www.youtube.com/)
+  - [JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
+  - [YouTube](https://www.youtube.com/)
   - [W3Schools](https://www.w3schools.com/)
   - [Trello Board](https://trello.com/b/7v4C9C0L/final-solo-project) for organization
