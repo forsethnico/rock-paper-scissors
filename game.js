@@ -2,8 +2,8 @@
 
 class Game {
   constructor() {
-    this.humanPlayer = new Player("human", '👩')
-    this.computerPlayer = new Player("computer", "💻")
+    this.humanPlayer = new Player("Human", '👩')
+    this.computerPlayer = new Player("Computer", "💻")
     this.gameType = ""
     this.fighters = [];
   }

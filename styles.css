@@ -91,6 +91,10 @@ button {
   padding: 10px;
 }
 
+span {
+  margin: 2px;
+}
+
 .hidden {
   display: none!important
 }
