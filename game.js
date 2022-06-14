@@ -1,5 +1,3 @@
-// var Player = require('./player');
-
 class Game {
   constructor() {
     this.humanPlayer = new Player("Human", '👩')
@@ -36,7 +34,3 @@ class Game {
       return winner
     }
 }
-
-
-
-// module.exports = Game;

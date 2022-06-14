@@ -56,19 +56,22 @@ function getUserChoice(target) {
   changeGameBtn.classList.remove('hidden')
   resultPodium.innerHTML = `<img class="fighter-choices" src="assets/${gameBoard.humanPlayer.fighter}.png"/>
   <img class="fighter-choices" src="assets/${gameBoard.computerPlayer.fighter}.png"/>`
+  setTimeout(viewGame, 2000);
 }
 
 function viewGame(){
+  choice.innerHTML = `<h2>Choose your fighter!</h2>`
   classicFighters.classList.remove('hidden')
+  resultPodium.classList.add('hidden')
   if (gameBoard.gameType === "difficult") {
     difficultFighters.classList.remove('hidden')
   }
 }
 
-
 function showRules(){
   resultPodium.classList.add('hidden')
   rulesWrapper.classList.remove('hidden')
+  classicFighters.classList.add('hidden')
+  difficultFighters.classList.add('hidden')
   choice.innerHTML = `<h2>Choose your game!</h2>`
-
 }
