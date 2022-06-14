@@ -4,7 +4,7 @@ var fighterChoices = document.querySelectorAll('.fighter-choices')
 var classicFighters = document.querySelector('.classic-choice')
 var difficultFighters = document.querySelector('.difficult-choice')
 var humanScore = document.querySelector('.human-wins')
-var computerScore = document.querySelector('.computer-wins');
+var computerScore = document.querySelector('.computer-wins')
 var phrase = document.querySelector('.phrase')
 var resultPodium = document.querySelector('.result-podium')
 var changeGameBtn = document.querySelector('.change-game-button')
@@ -21,7 +21,7 @@ var gameBoard = new Game()
 
 function chooseGame(event) {
   if (event.target.classList.contains('rules-box') || event.target.parentNode.classList.contains('rules-box')) {
-    var gameType = event.target.getAttribute('data-game-type');
+    var gameType = event.target.getAttribute('data-game-type')
     if (event.target.parentNode.classList.contains('rules-box')) {
       gameType = event.target.parentNode.getAttribute('data-game-type')
     }
