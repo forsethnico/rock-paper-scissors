@@ -27,10 +27,10 @@ function chooseGame(event) {
     }
     gameBoard.setGameType(gameType)
     phrase.innerHTML = `<h2>Choose your fighter!</h2>`
-    rulesWrapper.classList.add('hidden')
-    classicFighters.classList.remove('hidden')
+    hide(rulesWrapper)
+    show(classicFighters)
     if (gameBoard.gameType === 'difficult') {
-      difficultFighters.classList.remove('hidden')
+      show(difficultFighters)
     }
   }
 }
@@ -46,10 +46,10 @@ function showWinner(target) {
   }
   humanScore.innerHTML = `<h2>Wins: ${gameBoard.humanPlayer.wins}</h2>`
   computerScore.innerHTML = `<h2>Wins: ${gameBoard.computerPlayer.wins}</h2>`
-  resultPodium.classList.remove('hidden')
-  classicFighters.classList.add('hidden')
-  difficultFighters.classList.add('hidden')
-  changeGameBtn.classList.remove('hidden')
+  show(resultPodium)
+  hide(classicFighters)
+  hide(difficultFighters)
+  show(changeGameBtn)
   resultPodium.innerHTML = `<img class="fighter-choices" src="assets/${gameBoard.humanPlayer.fighter}.png"/>
   <img class="fighter-choices" src="assets/${gameBoard.computerPlayer.fighter}.png"/>`
   changeGameBtn.removeEventListener('click', showRules)
@@ -59,17 +59,25 @@ function showWinner(target) {
 function showGame(){
   phrase.innerHTML = `<h2>Choose your fighter!</h2>`
   changeGameBtn.addEventListener('click', showRules)
-  resultPodium.classList.add('hidden')
-  classicFighters.classList.remove('hidden')
+  hide(resultPodium)
+  show(classicFighters)
   if (gameBoard.gameType === "difficult") {
-    difficultFighters.classList.remove('hidden')
+    show(difficultFighters)
   }
 }
 
 function showRules(){
   phrase.innerHTML = `<h2>Choose your game!</h2>`
-  resultPodium.classList.add('hidden')
-  rulesWrapper.classList.remove('hidden')
-  classicFighters.classList.add('hidden')
-  difficultFighters.classList.add('hidden')
+  hide(resultPodium)
+  show(rulesWrapper)
+  hide(classicFighters)
+  hide(difficultFighters)
+}
+
+function hide(element) {
+  element.classList.add('hidden')
+}
+
+function show(element) {
+  element.classList.remove('hidden')
 }
