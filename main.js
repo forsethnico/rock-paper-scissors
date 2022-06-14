@@ -1,24 +1,20 @@
-//const Game = require('/game');
-
+var rulesWrapper = document.querySelector(".rules-wrapper")
 var rulesBtn = document.querySelectorAll(".rules-box")
 var fighterChoices = document.querySelectorAll(".fighter-choices")
+var classicFighters = document.querySelector(".classic-choice")
+var difficultFighters = document.querySelector(".difficult-choice")
 var humanScore = document.querySelector(".human-wins")
 var computerScore = document.querySelector(".computer-wins");
 var choice = document.querySelector(".choice")
-var classicFighters = document.querySelector(".classic-choice")
-var difficultFighters = document.querySelector(".difficult-choice")
-var rulesWrapper = document.querySelector(".rules-wrapper")
 var resultPodium = document.querySelector(".result-podium")
-var changeGameBtn = document.querySelector(".game-button")
+var changeGameBtn = document.querySelector(".change-game-button")
 
-// window.addEventListener("load", chooseGame)
 fighterChoices.forEach((choice) => {
   choice.addEventListener("click", getUserChoice)
 })
 rulesBtn.forEach((choice) => {
   choice.addEventListener("click", chooseGame)
 })
-
 changeGameBtn.addEventListener("click", showRules)
 
 var gameBoard = new Game()
@@ -44,9 +40,9 @@ function getUserChoice(target) {
   var humanChoice = event.target.getAttribute("data-fighter-type")
   var winner = gameBoard.decideWinner(humanChoice)
   if (winner === null) {
-    choice.innerHTML = `<h2>😭It's a draw!😭</h2>`
+    choice.innerHTML = `<h2>😭 It's a draw! 😭</h2>`
   } else {
-    choice.innerHTML = `<h2>${winner.token}${winner.name} won this round!${winner.token}</h2>`
+    choice.innerHTML = `<h2>${winner.token} ${winner.name} won this round! ${winner.token}</h2>`
   }
   humanScore.innerHTML = `<h2>Wins: ${gameBoard.humanPlayer.wins}</h2>`
   computerScore.innerHTML = `<h2>Wins: ${gameBoard.computerPlayer.wins}</h2>`
@@ -56,13 +52,15 @@ function getUserChoice(target) {
   changeGameBtn.classList.remove('hidden')
   resultPodium.innerHTML = `<img class="fighter-choices" src="assets/${gameBoard.humanPlayer.fighter}.png"/>
   <img class="fighter-choices" src="assets/${gameBoard.computerPlayer.fighter}.png"/>`
-  setTimeout(viewGame, 2000);
+  changeGameBtn.removeEventListener("click", showRules)
+  setTimeout(showGame, 2000);
 }
 
-function viewGame(){
-  choice.innerHTML = `<h2>Choose your fighter!</h2>`
-  classicFighters.classList.remove('hidden')
+function showGame(){
   resultPodium.classList.add('hidden')
+  classicFighters.classList.remove('hidden')
+  changeGameBtn.addEventListener("click", showRules)
+  choice.innerHTML = `<h2>Choose your fighter!</h2>`
   if (gameBoard.gameType === "difficult") {
     difficultFighters.classList.remove('hidden')
   }
