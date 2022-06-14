@@ -4,7 +4,7 @@ class Game {
   constructor() {
     this.humanPlayer = new Player("human", '👩')
     this.computerPlayer = new Player("computer", "💻")
-    this.gameType = "classic"
+    this.gameType = ""
     this.fighters = [];
   }
   setGameType(gameType) {
@@ -16,8 +16,10 @@ class Game {
     }
   }
   decideWinner(humanChoice) {
-      var result = ""
+      var winner = null
+      this.humanPlayer.fighter = humanChoice;
       var computerChoice = this.computerPlayer.takeTurn(this.fighters)
+
       if (humanChoice === computerChoice) {
         winner = null
       } else if ((humanChoice === "rock" && ['scissors', 'lizard'].includes(computerChoice)) ||

@@ -7,6 +7,7 @@ class Player {
   }
   takeTurn(fighters){
     var randomNumber = Math.floor(Math.random() * fighters.length)
-    return fighters[randomNumber]
+    this.fighter = fighters[randomNumber]
+    return this.fighter;
   }
 }

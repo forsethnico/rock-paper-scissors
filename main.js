@@ -4,10 +4,11 @@ var rulesBtn = document.querySelectorAll(".rules-box")
 var fighterChoices = document.querySelectorAll(".fighter-choices")
 var humanScore = document.querySelector(".human-wins")
 var computerScore = document.querySelector(".computer-wins");
-var result = document.querySelector(".result")
+var choice = document.querySelector(".choice")
 var classicFighters = document.querySelector(".classic-choice")
 var difficultFighters = document.querySelector(".difficult-choice")
 var rulesWrapper = document.querySelector(".rules-wrapper")
+var resultPodium = document.querySelector(".result-podium")
 
 // window.addEventListener("load", chooseGame)
 fighterChoices.forEach((choice) => {
@@ -20,11 +21,17 @@ rulesBtn.forEach((choice) => {
 var gameBoard = new Game()
 
 function chooseGame(event) {
-  gameBoard.setGameType(event.target.getAttribute("data-game-type"))
-  rulesWrapper.classList.add('hidden')
-  classicFighters.classList.remove('hidden')
-  if (gameBoard.gameType === "difficult") {
-    difficultFighters.classList.remove('hidden')
+  if (event.target.classList.contains('rules-box') || event.target.parentNode.classList.contains('rules-box')) {
+    var gameType = event.target.getAttribute("data-game-type");
+    if (event.target.parentNode.classList.contains('rules-box')) {
+      gameType = event.target.parentNode.getAttribute('data-game-type')
+    }
+    gameBoard.setGameType(gameType)
+    rulesWrapper.classList.add('hidden')
+    classicFighters.classList.remove('hidden')
+    if (gameBoard.gameType === "difficult") {
+      difficultFighters.classList.remove('hidden')
+    }
   }
 }
 
@@ -32,11 +39,15 @@ function getUserChoice(target) {
   var humanChoice = event.target.getAttribute("data-fighter-type")
   var winner = gameBoard.decideWinner(humanChoice)
   if (winner === null) {
-    result.innerHTML = `<h1 class="result">It's a draw!</h1>`
+    choice.innerHTML = `<h2>It's a draw!</h2>`
   } else {
-    result.innerHTML = `<h1 class="result">${winner.token}${winner.name} won this round!${winner.token}</h1>`
+    choice.innerHTML = `<h2>${winner.token}${winner.name} won this round!${winner.token}</h2>`
   }
-  //show computer and human choices on winner podium
-  humanScore.innerText = `Wins: ${gameBoard.humanPlayer.wins}`
-  computerScore.innerText = `Wins: ${gameBoard.computerPlayer.wins}`
+  humanScore.innerHTML = `<h2>Wins: ${gameBoard.humanPlayer.wins}</h2>`
+  computerScore.innerHTML = `<h2>Wins: ${gameBoard.computerPlayer.wins}</h2>`
+  resultPodium.classList.remove('hidden')
+  classicFighters.classList.add('hidden')
+  difficultFighters.classList.add('hidden')
+  resultPodium.innerHTML = `<img class="fighter-choices" src="assets/${gameBoard.humanPlayer.fighter}.png"/>
+  <img class="fighter-choices" src="assets/${gameBoard.computerPlayer.fighter}.png"/>`
 }
