@@ -5,7 +5,7 @@ Rock, Paper, Scissors is a single page web application built with HTML5, CSS3, a
 ## Project Specs
 The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html).
 ## Deployed Page
-This application will be deployed to GitHub pages, and can be accessed soon once made public. 
+[Deployed Site](https://forsethnico.github.io/rock-paper-scissors/)
 ## Contributors
   [Nicole Forseth](https://github.com/forsethnico) - Front End Engineering Student at [Turing School of Software and Design](https://turing.edu/)
 ## Learning Goals
